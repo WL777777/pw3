@@ -11,14 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
-Route::get('/laboratorio', function () {
-    return view('laboratorio');
-});
 
 Route::get('/Contato', function () {
     return view('Contato');
@@ -32,8 +26,12 @@ Route::get('/Reclamacao', function () {
     return view('Reclamacao');
 });
 
-Route::get('/Principal', function () {
+Route::get('/', function () {
     return view('Principal');
 });
 
+Route::get('/laboratorio', "LaboratorioController@index" );
 
+Route::get('/reclamacao', "ReclamacaoController@index" );
+
+?>

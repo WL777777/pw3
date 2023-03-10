@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\ReclamacaoModel;
 use Illuminate\Http\Request;
 
-class ReclamacaoModelController extends Controller
+use App\Reclamacao;
+
+class ReclamacaoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,16 @@ class ReclamacaoModelController extends Controller
      */
     public function index()
     {
-        //
+        $reclamacao = Reclamacao::all();
+        foreach ($reclamacao as $rec) {
+            echo $rec->idRec;
+            echo $rec->idLab;
+            echo $rec->pc;
+            echo $rec->titulo;
+            echo $rec->descricao;
+            echo $rec->dtCriacao;
+
+        }
     }
 
     /**
@@ -41,10 +51,10 @@ class ReclamacaoModelController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\ReclamacaoModel  $reclamacaoModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(ReclamacaoModel $reclamacaoModel)
+    public function show($id)
     {
         //
     }
@@ -52,10 +62,10 @@ class ReclamacaoModelController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ReclamacaoModel  $reclamacaoModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(ReclamacaoModel $reclamacaoModel)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +74,10 @@ class ReclamacaoModelController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ReclamacaoModel  $reclamacaoModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ReclamacaoModel $reclamacaoModel)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +85,10 @@ class ReclamacaoModelController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ReclamacaoModel  $reclamacaoModel
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ReclamacaoModel $reclamacaoModel)
+    public function destroy($id)
     {
         //
     }
