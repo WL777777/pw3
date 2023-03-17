@@ -18,10 +18,15 @@ class ReclamacaoController extends Controller
         $reclamacao = Reclamacao::all();
         foreach ($reclamacao as $rec) {
             echo $rec->idRec;
+            echo "<br>";
             echo $rec->idLab;
+            echo "<br>";
             echo $rec->pc;
+            echo "<br>";
             echo $rec->titulo;
+            echo "<br>";
             echo $rec->descricao;
+            echo "<br>";
             echo $rec->dtCriacao;
 
         }

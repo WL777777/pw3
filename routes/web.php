@@ -30,6 +30,10 @@ Route::get('/', function () {
     return view('Principal');
 });
 
+// Route::get('/laboratorio', function () {
+//     return view('laboratorio');
+// });
+
 Route::get('/laboratorio', "LaboratorioController@index" );
 
 Route::get('/reclamacao', "ReclamacaoController@index" );

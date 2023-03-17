@@ -15,11 +15,17 @@ class LaboratorioController extends Controller
     {
         $laboratorio= Laboratorio::all();
         
-        foreach($laboratorio as $lab){
-            echo $lab -> idLab;    
-            echo $lab -> Lab;
+        // foreach($laboratorio as $lab){
+        //     echo $lab -> idLab; 
+        //     echo "<br>";
+        //     echo $lab -> Lab;   
+        //     echo "<br>";
+            
+                    //nome da view
+        return view('laboratorio', compact('laboratorio'));
+             
     }
-}
+
 
     /**
      * Show the form for creating a new resource.
