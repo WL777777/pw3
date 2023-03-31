@@ -16,20 +16,9 @@ class ReclamacaoController extends Controller
     public function index()
     {
         $reclamacao = Reclamacao::all();
-        foreach ($reclamacao as $rec) {
-            echo $rec->idRec;
-            echo "<br>";
-            echo $rec->idLab;
-            echo "<br>";
-            echo $rec->pc;
-            echo "<br>";
-            echo $rec->titulo;
-            echo "<br>";
-            echo $rec->descricao;
-            echo "<br>";
-            echo $rec->dtCriacao;
+        return view('reclamacao',compact('reclamacao')); 
 
-        }
+        
     }
 
     /**
@@ -50,7 +39,15 @@ class ReclamacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reclamacao = new Reclamacao();
+        $reclamacao -> idLab = $request -> idLab;
+        $reclamacao -> pc = $request -> pc;
+        $reclamacao -> titulo = $request -> titulo;
+        $reclamacao -> descricao = $request -> descricao;
+        $reclamacao -> dtCriacao= $request -> dtCriacao;
+
+        $reclamacao -> save();
+        return redirect('/reclamacao');
     }
 
     /**
@@ -93,8 +90,10 @@ class ReclamacaoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($idRec)
     {
-        //
+        $reclamacao = new Reclamacao();
+        $reclamacao->where('idRec','=',$idRec)->delete();
+        return redirect('/reclamacao');
     }
 }

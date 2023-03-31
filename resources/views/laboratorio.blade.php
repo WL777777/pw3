@@ -10,9 +10,8 @@
 <body>
     
     <!-- @ é uma função do blade  -->
-    @foreach($laboratorio as $lab)
-       <p> {{$lab -> idLab}}</p>
-       <p>{{$lab -> Lab}} </p>
+    @foreach($laboratorios as $lab)
+        <p> {{$lab->idLab}} {{$lab->lab}} </p>
     @endforeach
 
 

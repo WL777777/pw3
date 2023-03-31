@@ -13,16 +13,8 @@ class LaboratorioController extends Controller
      */
     public function index()
     {
-        $laboratorio= Laboratorio::all();
-        
-        // foreach($laboratorio as $lab){
-        //     echo $lab -> idLab; 
-        //     echo "<br>";
-        //     echo $lab -> Lab;   
-        //     echo "<br>";
-            
-                    //nome da view
-        return view('laboratorio', compact('laboratorio'));
+        $laboratorios = Laboratorio::all();
+        return view('laboratorio',compact('laboratorios')); 
              
     }
 
