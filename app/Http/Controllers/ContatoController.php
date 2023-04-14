@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\ContatoModel;
 
 class ContatoController extends Controller
+
+
+
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +19,10 @@ class ContatoController extends Controller
     public function index()
     {
         $contatos = ContatoModel::all();
-        return view('Contato',compact('contatos')); 
+        // $contatos = ContatoModel::where('email', '=', 'maria@gmail.com')->get();
+        // $contatos = ContatoModel::orderByDesc('dtCriacao')->get();
+        // $contatos = ContatoModel::where('dtCriacao', '=', '2023-04-01')->get();
+        return view('contato',compact('contatos')); 
     }
 
     /**
@@ -26,7 +32,7 @@ class ContatoController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

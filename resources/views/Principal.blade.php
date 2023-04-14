@@ -15,8 +15,8 @@
        <ul class="nav-list">
             <a href="/">Home</a>
             <a href="/QuemSomos">QuemSomos</a>
-            <a href="/Reclamacao">Reclamação</a>
-            <a href="/Contato">Contato</a>
+            <a href="/reclamacao">Reclamação</a>
+            <a href="/contato">Contato</a>
         </ul>
       </nav>
     </header>

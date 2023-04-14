@@ -25,12 +25,16 @@ Route::get('/QuemSomos', function () {
     return view('QuemSomos');
 });
 
-Route::get('/Reclamacao', function () {
-    return view('Reclamacao');
+Route::get('/reclamacao', function () {
+    return view('reclamacao');
 });
 
 Route::get('/', function () {
     return view('Principal');
+});
+
+Route::get('/contato', function () {
+    return view('contato');
 });
 
 // Route::get('/laboratorio', function () {

@@ -7,7 +7,7 @@
     <title>Reclamacao</title>    
 </head>
 <body>
-
+    
     <form action="/reclamacao" method="post">        
         {{csrf_field()}}        
         <input type="text" name="pc" placeholder="pc"/>
@@ -17,14 +17,18 @@
         <input type="text" name="dtCriacao" placeholder="data de criacao" />
         <input type="submit" value="Salvar" />
     </form>
-
-    @foreach($reclamacao as $c)        
+            
+     <php? Data = DateTime.Now ?>
+    
+    @foreach($reclamacao as $c) 
+     
         <p>
         {{$c->pc}}
         {{$c->idLab}}
         {{$c->titulo}}
         {{$c->descricao}}
         {{$c->dtCriacao}}
+        
         <a href="/reclamacao/excluir/{{$c->idRec}}"> Excluir </a>
         </p>
     @endforeach
