@@ -28,5 +28,14 @@
         </p>
     @endforeach
     
+
+
+    <select name="selContato">
+    @foreach($contatos as $c)
+    <option value="{{$c->idContato}}"> {{$c->nome}}  </option>    
+    @endforeach
+
+    
+</select>
 </body>
 </html>

@@ -99,4 +99,25 @@ class ContatoController extends Controller
         $contato->where('idContato','=',$idContato)->delete();
         return redirect('/contato');
     }
+    
+    public function contatoLista()
+    {
+        $contatos = Contato::all();
+        //$contatos = Contato::where('email','=','maria@gmail.com')->get();
+        
+        return view('contato',compact('contatos'));
+
+        /*
+        foreach($contatos as $c){
+            echo $c->nome;
+        }
+        */
+    }
+
+
+    public function allContacts(){
+        $contatos = ContatoModel::all();      
+        return $contatos;
+    }
+
 }

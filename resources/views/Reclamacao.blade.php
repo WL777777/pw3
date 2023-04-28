@@ -32,6 +32,13 @@
         <a href="/reclamacao/excluir/{{$c->idRec}}"> Excluir </a>
         </p>
     @endforeach
+
+    <select name="selReclamacao">
+    @foreach($contatos as $c)
+    <option value="{{$c->idlab}}"> {{$c->descricao}}  </option>    
+    @endforeach
+</select>
+
     
 </body>
 </html>

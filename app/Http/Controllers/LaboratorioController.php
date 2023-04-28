@@ -82,4 +82,12 @@ class LaboratorioController extends Controller
     {
         //
     }
+
+    public function allLab(){
+        $laboratorios = Laboratorio::all();      
+        return $laboratorios;
+    }
+
+    
+
 }

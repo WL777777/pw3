@@ -96,4 +96,9 @@ class ReclamacaoController extends Controller
         $reclamacao->where('idRec','=',$idRec)->delete();
         return redirect('/reclamacao');
     }
+
+    public function allRec(){
+        $reclamacao = Reclamacao::all();      
+        return $reclamacao;
+    }
 }

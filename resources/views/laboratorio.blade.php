@@ -14,6 +14,8 @@
         <p> {{$lab->idLab}} {{$lab->lab}} </p>
     @endforeach
 
+    
+
 
 </body>
 </html>
